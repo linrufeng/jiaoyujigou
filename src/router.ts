@@ -1,16 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-const Index = () => import("./view/index.vue") ;
-const Detail = ()=> import("./view/detail.vue");
-const Detail2 = () => import("./view/detail2.vue");
-
+const jigouList = () => import("./view/jigou-list.vue") ;
+const jigouDetail = ()=> import("./view/jigou-detail.vue");
 Vue.use(VueRouter)
 
 const routes = [
-    { path: "/", component: Index },
-    { path: "/detail", component: Detail },
-    { path: "/detail2", component: Detail2 }, 
+    { path: "/", component: jigouList },
+    { path: "/detail", component: jigouDetail }   
 ];
 const router = new VueRouter({
     mode:'hash',

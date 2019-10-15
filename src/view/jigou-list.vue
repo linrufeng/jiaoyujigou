@@ -1,5 +1,14 @@
 <template>
     <div class="list-waper">
+        <div class="header">
+            <a href="/" class="back">返回</a>
+            <span> 首页</span>   
+            <span class="use"><a href="#/login">登录|注册</a></span>
+            <span><a href="#/my">个人中心</a></span>
+        </div>
+        <div class="banner">
+            <img src="../asset/img/test.jpg" alt="教育机构">
+        </div>
         <div class="fitter">
             <span>排名:</span><span @click="buyPingfen">按评分{{wayPingfen}}</span><span @click="buyPerNum">按评论数{{wayPerNum}}</span>
         </div>
@@ -93,11 +102,18 @@ export default class list extends Vue {
 </script>
 <style lang="scss" scoped>
 .list-waper{
-    padding-top:1rem;
+   
+}
+
+.banner{
+    width: 7.5rem;
+    margin:0 auto;
+    img{
+        width: 7.5rem;
+    }
 }
 .fitter{
-    background: #fff;
-    position: fixed;
+    background: #fff;   
     width: 100%;
     height: .8rem;
     align-items: center;

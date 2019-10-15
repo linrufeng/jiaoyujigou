@@ -1,8 +1,10 @@
 <template>
     <div class="warper">
         <div class="header">
-            <a href="" class="back">返回</a>
-            机构详情
+            <a href="/" class="back">返回</a>
+            <span> 机构详情</span>   
+            <span class="use"><a href="#/login">登录|注册</a></span>
+            <a href="#/my">个人中心</a>
         </div>
         <div class="banner">
             <img src="../asset/img/test.jpg" alt="">
@@ -10,8 +12,18 @@
         <div class="detial">
             <h3>红果果机构</h3>
             <div class="des">文案文案文案文案文案文案文案文案文案文案文案文案</div>
-            <div><span>联系我们</span><span>到这去</span></div>
-            <div class="bottom">
+            <div><span>联系我们</span><span>到这去</span></div>           
+        </div>
+        <ul class="classify">
+            <li>综合</li>
+            <li>语文</li>
+            <li>数学</li>
+            <li>外语</li>
+            <li>历史</li>
+            <li>物理</li>
+            <li>体育</li>            
+        </ul>
+         <div class="pingfen-box">
                 <p>
                     <span>评分： 10分</span> 
                     <span>评论人数:10</span>
@@ -23,16 +35,6 @@
                 </p>
                 
             </div>
-        </div>
-        <ul class="classify">
-            <li>语文</li>
-            <li>数学</li>
-            <li>外语</li>
-            <li>历史</li>
-            <li>物理</li>
-            <li>体育</li>
-            <li>体操</li>
-        </ul>
         <ul class="pinglun-list">
             <li class="pinglun">               
                 <div class="head-box">
@@ -108,6 +110,15 @@
         <div class="bottom-fl">
             <p>留下您精辟的评论</p>
         </div>
+        <div class="pinglun-ui">
+            <div class="tool">
+                <div class="img-box">
+                    添加图片
+                </div>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <button>发送</button>
+            </div>
+        </div>
     </div>
 </template>
 <script lang="ts">
@@ -119,6 +130,45 @@ export default class list extends Vue {
 }
 </script>
 <style lang="scss" >
+.pinglun-ui{
+    top:0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    .tool{
+        position: absolute;
+        width: 100%;       
+        bottom: 0;
+        textarea{
+            width: 100%;
+            border:none;
+            margin: 0;
+            padding:0;
+            background: #fff;
+            outline: none;
+        }
+        .img-box{
+            height: 1rem;
+            background: #fff;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        button{
+            width: 100%;
+            height: 1rem;
+            border:none;
+            margin: 0;
+            padding:0;
+            background: #fff;
+            outline: none;
+        }
+    }
+}
+.pingfen-box{
+    background: #fff;
+    margin-top:.1rem;
+    padding:.2rem;
+}
 .pinglun-list{
     background: #fff;
     margin-top: .2rem;

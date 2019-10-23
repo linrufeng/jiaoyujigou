@@ -1,18 +1,28 @@
 <template>
     <div class="waper">
-        <!-- 登录功能/ 游客 、会员、机构管理者、超级管理员 -->
+        
+        
+        <lay :titleName="'首页'"> 
+            <!-- <div slot="centent" class="center">
+1
+            </div> -->
+        </lay>
         <!-- banner -->
         <!-- 热门机构 -->
         <!-- 热门评论 -->
         <!-- 最新评论 -->
-        <!--首页  机构  个人中心-->
+        
     </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'	
-
-@Component
+import lay from './../components/lay-top-to-bottom.vue'
+@Component({
+    components:{       
+        lay
+    }
+})
 export default class list extends Vue {
    
     mounted() {       

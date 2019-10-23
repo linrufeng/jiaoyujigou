@@ -3,7 +3,7 @@
         <div class="wrapper">
             <div class="content">
                 <div class="wel-box">
-                    <span class="name">欢迎登陆</span>
+                    <span class="name">欢迎注册</span>
                     <div class="line"></div>
                 </div>
                 <div class="name item">
@@ -13,11 +13,7 @@
                    <input-box @val="passwordFun" :name="'key'" :type="'password'"> 密码：</input-box>
                 </div>
                 <div class="button-box">
-                    <button @click="login">登陆</button>
-                    <div class="tip"> 
-                        <a class="log" href="">去注册</a>
-                        <a href="">忘记密码?</a>
-                        </div>
+                    <button @click="login">注册并登陆</button>                    
                 </div>
             </div>   
         </div>
@@ -26,7 +22,7 @@
 
 <script>
 import inputBox from './../components/input';
-import axios from 'axios';
+import axios from '../axios';
 export default {
     components: {
         inputBox
@@ -51,8 +47,8 @@ export default {
         login(){
             // 注册接口
             axios({
-                 method: 'post',
-                 url:'http://localhost:3001/login/login',
+                 type: 'post',
+                 url:'http://localhost:3001/login/register',
                  data:{                    
                     'name':this.name,
                     'password':this.password
